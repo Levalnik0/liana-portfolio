@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liana Valeeva — портфолио</title>
+<meta name="description" content="Шесть проектов, шесть разных языков дизайна: от full-stack сервиса на Laravel до 3D-витрины флакона на Three.js.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230a0a0b%22/></svg>">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="preloader" id="preloader">
+  <span class="preloader__num" id="preloaderNum">0</span>
+</div>
+
+<header class="header" id="header">
+  <a href="#top" class="header__logo">Liana Valeeva</a>
+  <nav class="header__nav">
+    <a href="#projects" data-cursor-hover>Проекты</a>
+    <a href="#contact" data-cursor-hover>Контакты</a>
+  </nav>
+  <a href="https://github.com/Levalnik0" target="_blank" rel="noopener" class="header__cta btn-magnetic" data-cursor-hover>GitHub</a>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal-line"><span>Портфолио · 2026</span></p>
+      <h1 class="hero__title">
+        <span class="line-wrap"><span class="line">Шесть проектов.</span></span>
+        <span class="line-wrap"><span class="line">Шесть разных языков</span></span>
+        <span class="line-wrap"><span class="line">дизайна.</span></span>
+      </h1>
+      <p class="hero__desc reveal-up">От full-stack сервиса с админкой до 3D-витрины флакона в браузере. Каждый проект — отдельная задача: свой характер, свой стек, своя идея.</p>
+    </div>
+    <div class="hero__scroll-hint reveal-up"><span>Листайте вниз</span></div>
+  </section>
+
+  <section class="projects" id="projects">
+
+    <article class="project project--code" data-index="01">
+      <div class="project__media project__media--code">
+        <div class="code-card">
+          <div class="code-card__dots"><span></span><span></span><span></span></div>
+          <div class="code-card__stack">
+            <span>Laravel</span>
+            <span>Blade</span>
+            <span>Tailwind CSS</span>
+            <span>MySQL</span>
+            <span>Filament</span>
+          </div>
+        </div>
+      </div>
+      <div class="project__text">
+        <span class="project__num">01</span>
+        <p class="eyebrow">Full-stack · backend + админка</p>
+        <h2 class="reveal-up">Автосервис</h2>
+        <p class="project__desc reveal-up">Сайт автосервиса в Казани: выкуп, продажа, обмен и ремонт автомобилей. Главная с формой заявки, страницы кредита и trade-in, отзывы клиентов, чат-бот подбора авто под запрос — и отдельная админка на Filament.</p>
+        <div class="project__tags reveal-up">
+          <span>Laravel</span><span>MySQL</span><span>Filament</span><span>Tailwind CSS</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="https://github.com/Levalnik0/autoblog" target="_blank" rel="noopener" class="project__link btn-magnetic" data-cursor-hover><span>Код на GitHub</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" data-index="02">
+      <div class="project__media">
+        <img src="assets/img/shot-chernozem.jpg" alt="ЧЕРНОЗЁМ — ресторан фермерской кухни" loading="lazy">
+      </div>
+      <div class="project__text">
+        <span class="project__num">02</span>
+        <p class="eyebrow">Ресторан</p>
+        <h2 class="reveal-up">ЧЕРНОЗЁМ</h2>
+        <p class="project__desc reveal-up">Ресторан авторской кухни на местных фермерских продуктах в Казани. Сезонное меню, открытая кухня, камерный зал — параллакс-фото, кастомный курсор, форма бронирования.</p>
+        <div class="project__tags reveal-up">
+          <span>GSAP</span><span>ScrollTrigger</span><span>Lenis</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="../01-gastro-chernozem/index.html" class="project__link btn-magnetic" data-cursor-hover><span>Смотреть демо</span><i>→</i></a>
+          <a href="https://github.com/Levalnik0/chernozem-restaurant" target="_blank" rel="noopener" class="project__link project__link--ghost btn-magnetic" data-cursor-hover><span>Код</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project project--rev" data-index="03">
+      <div class="project__media">
+        <img src="assets/img/shot-forma.jpg" alt="FORMA — капсульная коллекция одежды" loading="lazy">
+      </div>
+      <div class="project__text">
+        <span class="project__num">03</span>
+        <p class="eyebrow">Fashion</p>
+        <h2 class="reveal-up">FORMA</h2>
+        <p class="project__desc reveal-up">Марка одежды с чистыми линиями: капсульные коллекции, ограниченный тираж, натуральные материалы. Чёрно-белая галерея, magnetic-кнопки, drag-карусель.</p>
+        <div class="project__tags reveal-up">
+          <span>GSAP</span><span>ScrollTrigger</span><span>Lenis</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="../02-forma/index.html" class="project__link btn-magnetic" data-cursor-hover><span>Смотреть демо</span><i>→</i></a>
+          <a href="https://github.com/Levalnik0/forma-fashion" target="_blank" rel="noopener" class="project__link project__link--ghost btn-magnetic" data-cursor-hover><span>Код</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" data-index="04">
+      <div class="project__media">
+        <img src="assets/img/shot-obiem.jpg" alt="ОБЪЁМ — архитектурное бюро" loading="lazy">
+      </div>
+      <div class="project__text">
+        <span class="project__num">04</span>
+        <p class="eyebrow">Архитектура</p>
+        <h2 class="reveal-up">ОБЪЁМ</h2>
+        <p class="project__desc reveal-up">Архитектурное бюро: проектируем здания, в которых меньше декора и больше воздуха. Pinned-секции, SVG-анимации, строгая тёмная эстетика бетона и света.</p>
+        <div class="project__tags reveal-up">
+          <span>GSAP</span><span>ScrollTrigger</span><span>Lenis</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="../04-obiem/index.html" class="project__link btn-magnetic" data-cursor-hover><span>Смотреть демо</span><i>→</i></a>
+          <a href="https://github.com/Levalnik0/obiem-architecture" target="_blank" rel="noopener" class="project__link project__link--ghost btn-magnetic" data-cursor-hover><span>Код</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project project--rev" data-index="05">
+      <div class="project__media">
+        <img src="assets/img/shot-ritm.jpg" alt="РИТМ — приложение для бега" loading="lazy">
+      </div>
+      <div class="project__text">
+        <span class="project__num">05</span>
+        <p class="eyebrow">Приложение · самый насыщенный по анимациям</p>
+        <h2 class="reveal-up">РИТМ</h2>
+        <p class="project__desc reveal-up">Лендинг приложения для бега: пульсовые зоны, карта маршрута, персональный план. Pinned-мокап телефона с графиком, который рисуется при скролле, счётчики статистики, drag-лента отзывов, переключатель тарифов.</p>
+        <div class="project__tags reveal-up">
+          <span>GSAP</span><span>ScrollTrigger</span><span>Lenis</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="../05-ritm/index.html" class="project__link btn-magnetic" data-cursor-hover><span>Смотреть демо</span><i>→</i></a>
+          <a href="https://github.com/Levalnik0/ritm-run" target="_blank" rel="noopener" class="project__link project__link--ghost btn-magnetic" data-cursor-hover><span>Код</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project project--last" data-index="06">
+      <div class="project__media">
+        <img src="assets/img/shot-efir.jpg" alt="ЭФИР — ВУАЛЬ, новый аромат" loading="lazy">
+      </div>
+      <div class="project__text">
+        <span class="project__num">06</span>
+        <p class="eyebrow">Парфюмерия · 3D в браузере</p>
+        <h2 class="reveal-up">ЭФИР — ВУАЛЬ</h2>
+        <p class="project__desc reveal-up">Витрина нового аромата с настоящим 3D-флаконом на Three.js — его можно вращать прямо в браузере. Кинетическая типографика, scent-trail вдоль SVG-пути, ritual-секция с прогресс-кольцом.</p>
+        <div class="project__tags reveal-up">
+          <span>Three.js</span><span>GSAP</span><span>ScrollTrigger</span><span>Lenis</span>
+        </div>
+        <div class="project__links reveal-up">
+          <a href="../03-efir/index.html" class="project__link btn-magnetic" data-cursor-hover><span>Смотреть демо</span><i>→</i></a>
+          <a href="https://github.com/Levalnik0/efir-parfum" target="_blank" rel="noopener" class="project__link project__link--ghost btn-magnetic" data-cursor-hover><span>Код</span><i>→</i></a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="reveal-up">Спасибо за внимание</h2>
+    <p class="contact__sub reveal-up">Буду рада обсудить любой из проектов подробнее.</p>
+    <div class="contact__links reveal-up">
+      <a href="mailto:lianka20056@gmail.com" class="btn-primary btn-magnetic" data-cursor-hover>lianka20056@gmail.com</a>
+      <a href="https://github.com/Levalnik0" target="_blank" rel="noopener" class="btn-outline btn-magnetic" data-cursor-hover>GitHub профиль</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Liana Valeeva</span>
+  <span>Все демо открываются локально, без сервера</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

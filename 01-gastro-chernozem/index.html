@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЧЕРНОЗЁМ — ресторан фермерской кухни, Казань</title>
+<meta name="description" content="ЧЕРНОЗЁМ — ресторан авторской кухни на местных фермерских продуктах в Казани. Сезонное меню, открытая кухня, камерный зал.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800;900&family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬤</text></svg>">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor" id="cursor"><span class="cursor__label"></span></div>
+
+<div class="preloader" id="preloader">
+  <div class="preloader__mark">ЧЕРНОЗЁМ</div>
+  <div class="preloader__bar"><span id="preloaderFill"></span></div>
+  <div class="preloader__pct" id="preloaderPct">0</div>
+</div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#top" class="header__logo">ЧЕРНОЗЁМ</a>
+    <nav class="header__nav">
+      <a href="#philosophy" data-cursor-hover>Философия</a>
+      <a href="#menu" data-cursor-hover>Меню</a>
+      <a href="#gallery" data-cursor-hover>Пространство</a>
+      <a href="#chef" data-cursor-hover>Шеф</a>
+    </nav>
+    <a href="#reserve" class="header__cta btn-magnetic" data-cursor-hover>Забронировать</a>
+    <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#philosophy">Философия</a>
+  <a href="#menu">Меню</a>
+  <a href="#gallery">Пространство</a>
+  <a href="#chef">Шеф</a>
+  <a href="#reserve">Забронировать</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__img" style="background-image:url('assets/img/hero.jpg')"></div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-line"><span>Казань · Авторская кухня на местных продуктах</span></p>
+      <h1 class="hero__title">
+        <span class="split-line"><span class="split-word">ЗДЕСЬ</span></span>
+        <span class="split-line"><span class="split-word split-word--accent">РАСТЁТ</span></span>
+        <span class="split-line"><span class="split-word">ВКУС</span></span>
+      </h1>
+      <p class="hero__desc reveal-line"><span>Сезонное меню, открытая кухня и продукты от фермеров в радиусе 50&nbsp;км от Казани.</span></p>
+    </div>
+    <div class="hero__scroll">
+      <span>Листайте</span>
+      <div class="hero__scroll-line"><i></i></div>
+    </div>
+    <div class="hero__stats-chip">
+      <span class="count-up" data-count="4.9">0</span>
+      <small>рейтинг гостей</small>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>СЕЗОННОЕ МЕНЮ</span><span>·</span><span>ФЕРМЕРСКИЕ ПРОДУКТЫ</span><span>·</span><span>ОТКРЫТАЯ КУХНЯ</span><span>·</span><span>КАЗАНЬ</span><span>·</span>
+      <span>СЕЗОННОЕ МЕНЮ</span><span>·</span><span>ФЕРМЕРСКИЕ ПРОДУКТЫ</span><span>·</span><span>ОТКРЫТАЯ КУХНЯ</span><span>·</span><span>КАЗАНЬ</span><span>·</span>
+    </div>
+  </div>
+
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy__media">
+      <div class="philosophy__img-wrap">
+        <div class="philosophy__img" style="background-image:url('assets/img/about.jpg')"></div>
+      </div>
+      <div class="philosophy__badge">
+        <svg viewBox="0 0 80 80" width="78" height="78"><path id="circlePath" fill="none" d="M 40,40 m -32,0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0"/><text font-size="9.2" letter-spacing="2"><textPath href="#circlePath">С 2023 ГОДА · КАЗАНЬ · ЧЕРНОЗЁМ ·</textPath></text></svg>
+        <span class="philosophy__badge-dot"></span>
+      </div>
+    </div>
+    <div class="philosophy__text">
+      <p class="eyebrow">Философия</p>
+      <h2 class="reveal-up">Мы не готовим «ресторанную» еду. Мы готовим то, что растёт рядом.</h2>
+      <p class="philosophy__p reveal-up">Чернозём — самая плодородная почва на планете, и она у нас под ногами. Каждое утро повара объезжают фермерские хозяйства под Казанью и собирают меню из того, что созрело именно сегодня. Никакой заморозки, никакой доставки за три моря.</p>
+      <div class="philosophy__stats">
+        <div><span class="count-up" data-count="27">0</span><small>фермерских хозяйств-партнёров</small></div>
+        <div><span class="count-up" data-count="6">0</span><small>обновлений меню в год</small></div>
+        <div><span class="count-up" data-count="0">0</span><small>км средняя доставка продукта</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="menu__head">
+      <p class="eyebrow">Меню</p>
+      <h2 class="reveal-up">Сезон: октябрь — ноябрь</h2>
+    </div>
+    <div class="menu__tabs" role="tablist">
+      <button class="menu__tab is-active" data-tab="zakuski" role="tab" aria-selected="true" data-cursor-hover>Закуски</button>
+      <button class="menu__tab" data-tab="glavnoe" role="tab" aria-selected="false" data-cursor-hover>Горячее</button>
+      <button class="menu__tab" data-tab="desert" role="tab" aria-selected="false" data-cursor-hover>Десерты</button>
+      <button class="menu__tab" data-tab="napitki" role="tab" aria-selected="false" data-cursor-hover>Напитки</button>
+    </div>
+
+    <div class="menu__panel is-active" data-panel="zakuski">
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-1.jpg">
+        <span class="menu__item-name">Тартар из печёной свёклы с козьим сыром</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">420 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-2.jpg">
+        <span class="menu__item-name">Карпаччо из редьки дайкон, кедровое масло</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">380 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-3.jpg">
+        <span class="menu__item-name">Паштет из куриной печени, вишнёвый джем</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">450 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-4.jpg">
+        <span class="menu__item-name">Томлёные томаты, буррата, базилик</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">490 ₽</span>
+      </div>
+    </div>
+
+    <div class="menu__panel" data-panel="glavnoe">
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-5.jpg">
+        <span class="menu__item-name">Щека говяжья 12 часов, пюре из топинамбура</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">890 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-6.jpg">
+        <span class="menu__item-name">Судак на углях, соус из печёного перца</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">760 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-1.jpg">
+        <span class="menu__item-name">Утиная грудка, тыква, чернослив</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">820 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-2.jpg">
+        <span class="menu__item-name">Ризотто с белыми грибами и трюфелем</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">680 ₽</span>
+      </div>
+    </div>
+
+    <div class="menu__panel" data-panel="desert">
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-3.jpg">
+        <span class="menu__item-name">Медовик на ржаной муке, облепиха</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">340 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-4.jpg">
+        <span class="menu__item-name">Яблочный шарлотт, крем из топлёного молока</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">310 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-5.jpg">
+        <span class="menu__item-name">Тыквенный чизкейк, карамель на масле</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">360 ₽</span>
+      </div>
+    </div>
+
+    <div class="menu__panel" data-panel="napitki">
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-6.jpg">
+        <span class="menu__item-name">Морс из тёрна и чёрной смородины</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">220 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-1.jpg">
+        <span class="menu__item-name">Травяной чай с полевыми травами региона</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">190 ₽</span>
+      </div>
+      <div class="menu__item" data-cursor-hover data-thumb="assets/img/dish-2.jpg">
+        <span class="menu__item-name">Сидр фермерский, яблоко/груша</span>
+        <span class="menu__item-dots"></span>
+        <span class="menu__item-price">280 ₽</span>
+      </div>
+    </div>
+
+    <div class="menu__thumb" id="menuThumb"><div class="menu__thumb-img"></div></div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="gallery__head">
+      <p class="eyebrow">Пространство</p>
+      <h2 class="reveal-up">Открытая кухня. Камерный зал на 34 места.</h2>
+    </div>
+    <div class="gallery__grid">
+      <button class="gallery__item gallery__item--big" data-full="assets/img/gallery-1.jpg" data-cursor-hover>
+        <img src="assets/img/gallery-1.jpg" alt="Зал ресторана Чернозём" loading="lazy">
+        <span class="gallery__label">Зал</span>
+      </button>
+      <button class="gallery__item" data-full="assets/img/gallery-2.jpg" data-cursor-hover>
+        <img src="assets/img/gallery-2.jpg" alt="Открытая кухня" loading="lazy">
+        <span class="gallery__label">Кухня</span>
+      </button>
+      <button class="gallery__item" data-full="assets/img/gallery-3.jpg" data-cursor-hover>
+        <img src="assets/img/gallery-3.jpg" alt="Подача блюда" loading="lazy">
+        <span class="gallery__label">Подача</span>
+      </button>
+      <button class="gallery__item gallery__item--wide" data-full="assets/img/gallery-4.jpg" data-cursor-hover>
+        <img src="assets/img/gallery-4.jpg" alt="Барная стойка" loading="lazy">
+        <span class="gallery__label">Бар</span>
+      </button>
+      <button class="gallery__item" data-full="assets/img/gallery-5.jpg" data-cursor-hover>
+        <img src="assets/img/gallery-5.jpg" alt="Терраса" loading="lazy">
+        <span class="gallery__label">Терраса</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="chef" id="chef">
+    <div class="chef__portrait">
+      <div class="chef__img" style="background-image:url('assets/img/chef.jpg')"></div>
+    </div>
+    <div class="chef__content">
+      <p class="eyebrow">Шеф-повар</p>
+      <h2 class="reveal-up">Андрей Марков</h2>
+      <p class="chef__quote reveal-up">«Я не придумываю блюда. Я прислушиваюсь к тому, что привезли сегодня утром, и даю продукту договорить то, что он хочет сказать».</p>
+      <p class="chef__bio reveal-up">15 лет в профессии, стажировки в Копенгагене и Пьемонте. Вернулся в Казань, чтобы готовить из того, что растёт дома — и доказать, что локальная кухня может звучать на уровне мировых столиц.</p>
+    </div>
+  </section>
+
+  <section class="reserve" id="reserve">
+    <div class="reserve__inner">
+      <p class="eyebrow eyebrow--light">Бронирование</p>
+      <h2 class="reveal-up">Стол будет ждать вас</h2>
+      <form class="reserve__form" id="reserveForm" novalidate>
+        <div class="field">
+          <input type="text" id="r-name" name="name" required placeholder=" ">
+          <label for="r-name">Имя</label>
+          <span class="field__error">Введите имя</span>
+        </div>
+        <div class="field">
+          <input type="tel" id="r-phone" name="phone" required placeholder=" ">
+          <label for="r-phone">Телефон</label>
+          <span class="field__error">Введите телефон для подтверждения</span>
+        </div>
+        <div class="field">
+          <input type="date" id="r-date" name="date" required placeholder=" ">
+          <label for="r-date">Дата</label>
+          <span class="field__error">Выберите дату</span>
+        </div>
+        <div class="field">
+          <select id="r-guests" name="guests" required>
+            <option value="" disabled selected hidden></option>
+            <option>1 гость</option>
+            <option>2 гостя</option>
+            <option>3–4 гостя</option>
+            <option>5+ гостей</option>
+          </select>
+          <label for="r-guests">Количество гостей</label>
+        </div>
+        <button type="submit" class="btn-magnetic reserve__submit" data-cursor-hover>
+          <span>Отправить заявку</span>
+        </button>
+      </form>
+      <div class="reserve__success" id="reserveSuccess">
+        <p>Заявка получена. Мы перезвоним в течение 20 минут, чтобы подтвердить бронь.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__marquee" aria-hidden="true">
+    <div class="footer__marquee-track"><span>ЧЕРНОЗЁМ</span><span>ЧЕРНОЗЁМ</span><span>ЧЕРНОЗЁМ</span><span>ЧЕРНОЗЁМ</span></div>
+  </div>
+  <div class="footer__grid">
+    <div>
+      <p class="eyebrow eyebrow--light">Адрес</p>
+      <p>Казань, ул. Баумана, 24</p>
+      <p>Открыто ежедневно 12:00 — 00:00</p>
+    </div>
+    <div>
+      <p class="eyebrow eyebrow--light">Контакты</p>
+      <p><a href="tel:+79625561205" data-cursor-hover>+7 962 556-12-05</a></p>
+      <p><a href="mailto:stol@chernozem-kzn.ru" data-cursor-hover>stol@chernozem-kzn.ru</a></p>
+    </div>
+    <div>
+      <p class="eyebrow eyebrow--light">Соцсети</p>
+      <p><a href="https://t.me/chernozemkazan" target="_blank" rel="noopener" data-cursor-hover>Telegram</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 ЧЕРНОЗЁМ</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">✕</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

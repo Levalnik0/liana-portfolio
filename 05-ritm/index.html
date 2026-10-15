@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РИТМ — приложение для бега</title>
+<meta name="description" content="РИТМ считает пульс, темп и километры и превращает их в график, на который хочется смотреть. Бесплатно для iOS и Android.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230e0f0c%22/></svg>">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+
+<div class="preloader" id="preloader">
+  <span class="preloader__num" id="preloaderNum">0</span>
+</div>
+
+<header class="header" id="header">
+  <a href="#top" class="header__logo">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2-7 4 14 3-10 2 3h5"/></svg>
+    <span>РИТМ</span>
+  </a>
+  <nav class="header__nav">
+    <a href="#features" data-cursor-hover>Функции</a>
+    <a href="#progress" data-cursor-hover>Прогресс</a>
+    <a href="#pricing" data-cursor-hover>Тарифы</a>
+    <a href="#reviews" data-cursor-hover>Отзывы</a>
+  </nav>
+  <a href="#cta" class="header__cta btn-magnetic" data-cursor-hover>Скачать</a>
+  <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#features">Функции</a>
+  <a href="#progress">Прогресс</a>
+  <a href="#pricing">Тарифы</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#cta">Скачать</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero__img" style="background-image:url('assets/img/hero.jpg')"></div>
+    <div class="hero__scrim"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow"><span>Приложение для бега · iOS и Android</span></p>
+      <h1 class="hero__title">
+        <span class="line-wrap"><span class="line">Беги быстрее</span></span>
+        <span class="line-wrap"><span class="line">своего вчера</span></span>
+      </h1>
+      <p class="hero__desc">РИТМ считает пульс, темп и километры — и превращает это в понятный график, на который хочется смотреть.</p>
+      <div class="hero__actions">
+        <a href="#cta" class="btn-primary btn-magnetic" data-cursor-hover><span>Скачать бесплатно</span></a>
+        <span class="hero__platforms">Доступно на iPhone и Android</span>
+      </div>
+    </div>
+    <div class="hero__scroll-hint"><span>Листайте</span><i></i></div>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="stats__grid">
+      <div class="stat">
+        <span class="stat__value" data-count="28400" data-suffix="+">0</span>
+        <span class="stat__label">спортсменов</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value" data-count="18" data-suffix="%">0</span>
+        <span class="stat__label">средний рост темпа за 3&nbsp;месяца</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value" data-count="42" data-suffix="">0</span>
+        <span class="stat__label">страны</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="features__head">
+      <p class="eyebrow">Функции</p>
+      <h2 class="reveal-up">Всё, что нужно на пробежке — и ничего лишнего</h2>
+    </div>
+    <div class="features__grid">
+      <div class="feature reveal-up">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h4l2-7 4 14 3-10 2 3h5"/></svg></div>
+        <h3>Пульсовые зоны</h3>
+        <p>Пять зон нагрузки — от разминки до предела, в реальном времени на экране.</p>
+      </div>
+      <div class="feature reveal-up">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="2.5"/><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/></svg></div>
+        <h3>Карта маршрута</h3>
+        <p>Каждая пробежка сохраняется на карте — видно, где вы были быстрее всего.</p>
+      </div>
+      <div class="feature reveal-up">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V10M12 19V5M20 19v-7"/></svg></div>
+        <h3>Персональный план</h3>
+        <p>План растёт вместе с вами — по последним тренировкам, а не по общим таблицам.</p>
+      </div>
+      <div class="feature reveal-up">
+        <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+        <h3>Синхронизация</h3>
+        <p>Работает с большинством нагрудных датчиков и часов — без лишних проводов.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="progress" id="progress">
+    <div class="progress__sticky">
+      <div class="progress__text">
+        <p class="eyebrow">Прогресс</p>
+        <h2>Смотрите, как растёт ваш темп</h2>
+        <p class="progress__p">Каждая пробежка добавляет точку на график. Через месяц вы увидите не цифры, а кривую, которая идёт вверх.</p>
+      </div>
+      <div class="phone">
+        <div class="phone__notch"></div>
+        <div class="phone__screen">
+          <div class="phone__bar"><span>Темп · сегодня</span><span class="phone__bar-dot"></span></div>
+          <svg class="phone__chart" viewBox="0 0 300 170" preserveAspectRatio="none">
+            <polyline class="phone__chart-grid" points="10,150 290,150"></polyline>
+            <polyline class="phone__chart-line" points="10,140 45,128 80,118 115,124 150,95 185,100 220,70 255,55 290,30"></polyline>
+          </svg>
+          <div class="phone__chips">
+            <span class="chip chip--1">5.2 км</span>
+            <span class="chip chip--2">24:18</span>
+            <span class="chip chip--3">162 уд/мин</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <div class="reviews__head">
+      <p class="eyebrow">Отзывы</p>
+      <h2 class="reveal-up">Что говорят те, кто уже бежит</h2>
+    </div>
+    <div class="reviews__track-wrap">
+      <div class="reviews__track" id="reviewsTrack">
+        <article class="review">
+          <span class="review__avatar">МК</span>
+          <p>«Первый раз пробежала 10 км без остановки — и увидела на графике, с какой именно тренировки это стало возможным».</p>
+          <span class="review__name">Марина К.</span>
+        </article>
+        <article class="review">
+          <span class="review__avatar">ДН</span>
+          <p>«Бросил считать круги в уме. РИТМ считает за меня, а я просто бегу».</p>
+          <span class="review__name">Денис Н.</span>
+        </article>
+        <article class="review">
+          <span class="review__avatar">ОС</span>
+          <p>«Пульсовые зоны — то, чего не хватало все эти годы бега вслепую».</p>
+          <span class="review__name">Ольга С.</span>
+        </article>
+        <article class="review">
+          <span class="review__avatar">ИП</span>
+          <p>«Персональный план — единственное приложение, которое подстроилось под мой график, а не наоборот».</p>
+          <span class="review__name">Игорь П.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="pricing__head">
+      <p class="eyebrow">Тарифы</p>
+      <h2 class="reveal-up">Начните бесплатно, растите в своём темпе</h2>
+      <div class="pricing__toggle" id="pricingToggle">
+        <button class="is-active" data-period="monthly">Ежемесячно</button>
+        <button data-period="yearly">Ежегодно <span>-20%</span></button>
+      </div>
+    </div>
+    <div class="pricing__grid">
+      <div class="plan reveal-up">
+        <h3>Бесплатно</h3>
+        <p class="plan__price"><span>0 ₽</span></p>
+        <ul class="plan__list">
+          <li>Базовый трекинг пробежек</li>
+          <li>Карта маршрутов</li>
+          <li>3 отчёта в месяц</li>
+        </ul>
+        <a href="#cta" class="btn-outline btn-magnetic" data-cursor-hover>Начать</a>
+      </div>
+      <div class="plan plan--pro reveal-up">
+        <span class="plan__badge">Популярный</span>
+        <h3>Pro</h3>
+        <p class="plan__price"><span class="price-monthly">399 ₽</span><span class="price-yearly">319 ₽</span><i>/мес</i></p>
+        <ul class="plan__list">
+          <li>Безлимитные отчёты</li>
+          <li>Персональный план тренировок</li>
+          <li>Пульсовые зоны и экспорт данных</li>
+        </ul>
+        <a href="#cta" class="btn-primary btn-magnetic" data-cursor-hover>Выбрать Pro</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <h2 class="reveal-up">Первая пробежка с РИТМ — уже сегодня</h2>
+    <p class="reveal-up">Бесплатно. Без карты. Две минуты на установку.</p>
+    <div class="cta__actions">
+      <a href="#" class="btn-primary btn-magnetic" data-cursor-hover>Скачать для iOS</a>
+      <a href="#" class="btn-outline btn-magnetic" data-cursor-hover>Скачать для Android</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a href="#top" class="header__logo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h4l2-7 4 14 3-10 2 3h5"/></svg>
+        <span>РИТМ</span>
+      </a>
+      <p>Приложение для тех, кто бежит не ради цифр, а ради того, что за ними стоит.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Продукт</p>
+      <p><a href="#features" data-cursor-hover>Функции</a></p>
+      <p><a href="#pricing" data-cursor-hover>Тарифы</a></p>
+    </div>
+    <div>
+      <p class="eyebrow">Поддержка</p>
+      <p><a href="mailto:support@ritm-run.app" data-cursor-hover>support@ritm-run.app</a></p>
+      <p><a href="#" data-cursor-hover>Telegram-канал</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 РИТМ</span>
+    <span>Сделано для тех, кто бежит</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FORMA — капсульная коллекция одежды</title>
+<meta name="description" content="FORMA — марка одежды с чистыми линиями. Капсульные коллекции, ограниченный тираж, натуральные материалы.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23141210%22/></svg>">
+</head>
+<body>
+
+<div class="cursor" id="cursor"><span class="cursor__label"></span></div>
+
+<div class="preloader" id="preloader">
+  <div class="preloader__mark">FORMA</div>
+  <div class="preloader__bar"><span id="preloaderFill"></span></div>
+</div>
+
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#top" class="header__logo">FORMA</a>
+    <nav class="header__nav">
+      <a href="#collection" data-cursor-hover>Коллекция</a>
+      <a href="#edit" data-cursor-hover>Образы</a>
+      <a href="#about" data-cursor-hover>О бренде</a>
+      <a href="#materials" data-cursor-hover>Материалы</a>
+    </nav>
+    <a href="#subscribe" class="header__cta btn-magnetic" data-cursor-hover>Рассылка</a>
+    <button class="header__burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#collection">Коллекция</a>
+  <a href="#edit">Образы</a>
+  <a href="#about">О бренде</a>
+  <a href="#materials">Материалы</a>
+  <a href="#subscribe">Рассылка</a>
+</nav>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <div class="hero__text">
+      <p class="hero__eyebrow reveal-line"><span>Капсульная коллекция · Осень — зима</span></p>
+      <h1 class="hero__title">
+        <span class="clip-line"><span class="clip-word">ФОРМА</span></span>
+        <span class="clip-line"><span class="clip-word clip-word--accent">БЕЗ ШУМА</span></span>
+      </h1>
+      <p class="hero__desc reveal-line"><span>Чистые линии и натуральные материалы. Вещи, которые остаются в гардеробе на годы, а не на сезон.</span></p>
+      <a href="#collection" class="hero__link btn-magnetic" data-cursor-hover><span>Смотреть коллекцию</span><i>→</i></a>
+    </div>
+    <div class="hero__media" id="heroMedia">
+      <div class="hero__img" style="background-image:url('assets/img/hero.jpg')" id="heroImgFallback"></div>
+      <canvas id="heroCanvas"></canvas>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>НОВАЯ КОЛЛЕКЦИЯ</span><span>·</span><span>РУЧНАЯ ВЫДЕЛКА</span><span>·</span><span>ОГРАНИЧЕННЫЙ ТИРАЖ</span><span>·</span><span>БЕЗ СЕЗОННОЙ СПЕШКИ</span><span>·</span>
+      <span>НОВАЯ КОЛЛЕКЦИЯ</span><span>·</span><span>РУЧНАЯ ВЫДЕЛКА</span><span>·</span><span>ОГРАНИЧЕННЫЙ ТИРАЖ</span><span>·</span><span>БЕЗ СЕЗОННОЙ СПЕШКИ</span><span>·</span>
+    </div>
+  </div>
+
+  <section class="collection" id="collection">
+    <div class="collection__head">
+      <p class="eyebrow">Коллекция</p>
+      <h2 class="reveal-up">Осень — зима, 24 образа</h2>
+    </div>
+    <div class="collection__tabs">
+      <button class="collection__tab is-active" data-filter="all" data-cursor-hover>Всё</button>
+      <button class="collection__tab" data-filter="outer" data-cursor-hover>Верхняя одежда</button>
+      <button class="collection__tab" data-filter="knit" data-cursor-hover>Трикотаж</button>
+      <button class="collection__tab" data-filter="dress" data-cursor-hover>Платья</button>
+      <button class="collection__tab" data-filter="acc" data-cursor-hover>Аксессуары</button>
+    </div>
+    <div class="collection__grid">
+      <button class="look look--big" data-filter="outer" data-cursor-hover>
+        <img src="assets/img/look-1.jpg" alt="Пальто прямого кроя" loading="lazy">
+        <span class="look__info"><b>Пальто «Линия»</b><i>42 000 ₽</i></span>
+      </button>
+      <button class="look" data-filter="knit" data-cursor-hover>
+        <img src="assets/img/look-2.jpg" alt="Свитер крупной вязки" loading="lazy">
+        <span class="look__info"><b>Свитер «Контур»</b><i>18 500 ₽</i></span>
+      </button>
+      <button class="look" data-filter="dress" data-cursor-hover>
+        <img src="assets/img/look-3.jpg" alt="Платье-рубашка" loading="lazy">
+        <span class="look__info"><b>Платье «Тень»</b><i>24 000 ₽</i></span>
+      </button>
+      <button class="look look--wide" data-filter="outer" data-cursor-hover>
+        <img src="assets/img/look-4.jpg" alt="Пальто оверсайз" loading="lazy">
+        <span class="look__info"><b>Пальто «Силуэт»</b><i>46 500 ₽</i></span>
+      </button>
+      <button class="look" data-filter="acc" data-cursor-hover>
+        <img src="assets/img/look-5.jpg" alt="Кожаная сумка" loading="lazy">
+        <span class="look__info"><b>Сумка «Объём»</b><i>21 000 ₽</i></span>
+      </button>
+      <button class="look" data-filter="knit" data-cursor-hover>
+        <img src="assets/img/look-6.jpg" alt="Водолазка тонкой вязки" loading="lazy">
+        <span class="look__info"><b>Водолазка «Основа»</b><i>12 000 ₽</i></span>
+      </button>
+    </div>
+  </section>
+
+  <section class="edit" id="edit">
+    <div class="edit__sticky">
+      <div class="edit__head">
+        <p class="eyebrow">Образы</p>
+        <h2 class="reveal-up">Три силуэта сезона</h2>
+      </div>
+      <div class="edit__media">
+        <div class="edit__img is-active" style="background-image:url('assets/img/edit-1.jpg')" data-edit="0"></div>
+        <div class="edit__img" style="background-image:url('assets/img/edit-2.jpg')" data-edit="1"></div>
+        <div class="edit__img" style="background-image:url('assets/img/edit-3.jpg')" data-edit="2"></div>
+      </div>
+      <div class="edit__list">
+        <div class="edit__item is-active" data-edit-trigger="0">
+          <span class="edit__num">01</span>
+          <span class="edit__name">Рабочий день</span>
+          <span class="edit__desc">Пальто «Линия» + водолазка «Основа» + брюки прямого кроя</span>
+        </div>
+        <div class="edit__item" data-edit-trigger="1">
+          <span class="edit__num">02</span>
+          <span class="edit__name">Вечерний выход</span>
+          <span class="edit__desc">Платье «Тень» + сумка «Объём»</span>
+        </div>
+        <div class="edit__item" data-edit-trigger="2">
+          <span class="edit__num">03</span>
+          <span class="edit__name">Выходной</span>
+          <span class="edit__desc">Свитер «Контур» + пальто «Силуэт»</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about__media">
+      <div class="about__img-wrap">
+        <div class="about__img" style="background-image:url('assets/img/about.jpg')"></div>
+      </div>
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">О бренде</p>
+      <h2 class="reveal-up">Мы шьём меньше моделей, но доводим их до конца.</h2>
+      <p class="about__p reveal-up">FORMA — не про тренды. Мы выпускаем две капсулы в год вместо шести, каждую вещь — ограниченным тиражом, и перешиваем лекало, пока крой не сядет идеально. Это дольше. Зато вещь носится десятилетие, а не один сезон.</p>
+      <div class="about__rings">
+        <div class="ring" data-fraction="0.33">
+          <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__progress" cx="60" cy="60" r="52"/></svg>
+          <span class="ring__value"><span class="count-up" data-count="2">0</span></span>
+          <small>капсулы в год, не шесть</small>
+        </div>
+        <div class="ring" data-fraction="0.8">
+          <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__progress" cx="60" cy="60" r="52"/></svg>
+          <span class="ring__value"><span class="count-up" data-count="120">0</span></span>
+          <small>экземпляров на модель</small>
+        </div>
+        <div class="ring" data-fraction="0.85">
+          <svg viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="52"/><circle class="ring__progress" cx="60" cy="60" r="52"/></svg>
+          <span class="ring__value"><span class="count-up" data-count="85">0</span>%</span>
+          <small>натуральных материалов</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="materials" id="materials">
+    <div class="materials__head">
+      <p class="eyebrow">Материалы</p>
+      <h2 class="reveal-up">Из чего мы шьём</h2>
+    </div>
+    <div class="materials__grid">
+      <div class="material reveal-up">
+        <span class="material__num">01</span>
+        <h3>Лён</h3>
+        <p>Бельгийский лён плотного плетения — держит форму и дышит круглый год.</p>
+      </div>
+      <div class="material reveal-up">
+        <span class="material__num">02</span>
+        <h3>Шерсть</h3>
+        <p>Мериносовая пряжа без примесей синтетики — мягкая основа трикотажа.</p>
+      </div>
+      <div class="material reveal-up">
+        <span class="material__num">03</span>
+        <h3>Переработанный хлопок</h3>
+        <p>Хлопок из вторичного сырья для базовых силуэтов без потери прочности.</p>
+      </div>
+      <div class="material reveal-up">
+        <span class="material__num">04</span>
+        <h3>Ручная работа</h3>
+        <p>Финальная строчка и подгонка — вручную, в небольшой мастерской.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="subscribe" id="subscribe">
+    <div class="subscribe__inner">
+      <p class="eyebrow">Рассылка</p>
+      <h2 class="reveal-up">Узнайте первыми о новой капсуле</h2>
+      <form class="subscribe__form" id="subscribeForm" novalidate>
+        <div class="field">
+          <input type="email" id="s-email" name="email" required placeholder=" ">
+          <label for="s-email">Электронная почта</label>
+          <span class="field__error">Введите корректный e-mail</span>
+        </div>
+        <button type="submit" class="subscribe__submit btn-magnetic" data-cursor-hover aria-label="Подписаться"><i>→</i></button>
+      </form>
+      <div class="subscribe__success" id="subscribeSuccess">
+        <p>Готово — пришлём письмо, как откроется предзаказ.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__marquee" aria-hidden="true">
+    <div class="footer__marquee-track"><span>FORMA</span><span>FORMA</span><span>FORMA</span><span>FORMA</span></div>
+  </div>
+  <div class="footer__grid">
+    <div>
+      <p class="eyebrow">Шоурум</p>
+      <p>Показ по предварительной записи</p>
+      <p>Пн–Пт, 11:00–19:00</p>
+    </div>
+    <div>
+      <p class="eyebrow">Контакты</p>
+      <p><a href="mailto:studio@forma-brand.ru" data-cursor-hover>studio@forma-brand.ru</a></p>
+    </div>
+    <div>
+      <p class="eyebrow">Соцсети</p>
+      <p><a href="#" data-cursor-hover>Telegram</a></p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 FORMA</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">✕</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
